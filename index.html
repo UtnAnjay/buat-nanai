@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sayang Nanai❤️</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      body {
+        overflow: hidden;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .front {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('bg-loading.jpg') no-repeat;
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #d89090;
+}
+
+      .front .info {
+        padding: 20px 15px;
+        font-size: 4.5rem;
+        font-weight: bolder;
+        text-align: center;
+        text-shadow: 0 0 50px #d89090;
+      }
+
+      .front .countdown {
+        position: relative;
+        font-size: 5.5rem;
+        padding: 20px 15px;
+        text-shadow: 0 0 25px #d89090;
+      }
+
+      .front .countdown h1 {
+        display: none;
+        opacity: 0;
+      }
+
+      .front .loader {
+        position: relative;
+        margin-top: 100px;
+        width: 250px;
+        height: 10px;
+        border: 1px solid #d89090;
+        border-radius: 20px;
+        box-shadow: 0 0 25px #d89090;
+        overflow: hidden;
+      }
+
+      .front .loader .fill {
+        position: absolute;
+        height: 100%;
+        width: 0;
+        background: #d89090;
+        border-radius: 20px;
+        box-shadow: 0 0 25px #d89090;
+        animation: animate 10s linear forwards;
+      }
+
+      @keyframes animate {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+
+      .birthday {
+        position: fixed;
+        top: 0;
+        left: 120%;
+        height: 100%;
+        width: 100%;
+        background: url('ndut.jpg') no-repeat; 
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        color: #ff8080;
+        text-shadow: 0 0 25px #ffffff;
+        }
+
+      .birthday h1:nth-child(1) {
+        font-size: 4.3rem;
+        margin-left: 150%;
+      }
+
+      .birthday h1.year {
+        font-size: 12.3rem;
+        margin-top: 80%;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .front .info {
+          font-size: 2rem;
+        }
+
+        .front .countdown {
+          font-size: 3rem;
+        }
+
+        .front .loader {
+          margin-top: 50px;
+          width: 200px;
+          height: 8px;
+        }
+
+        .birthday h1:nth-child(1) {
+          font-size: 2rem;
+          margin-left: 120%;
+        }
+
+        .birthday h1.year {
+          font-size: 6rem;
+          margin-top: 50%;
+        }
+      }
+      .buttons {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #ff8080;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+audio {
+    display: none;
+}
+    </style>
+  </head>
+  <body>
+
+    <div class="front">
+      <p class="info">Bentar ya ndut</p>
+      <div class="countdown">
+        <h1 class="three">3</h1>
+        <h1 class="two">2</h1>
+        <h1 class="one">1</h1>
+      </div>
+      <div class="loader">
+        <div class="fill"></div>
+      </div>
+    </div>
+
+    <div class="birthday">
+        <h1 class="greeting">Hai Cantikk👋</h1>
+        <h1 class="year"></h1>
+
+   <div class="buttons">
+      <button class="btn" onclick="location.href='login.html'">Hai 👋</button>
+    </div>
+
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+window.onload = () => {
+    gsap.to(".info", {
+      opacity: 0,
+      display: "none",
+      duration: 1,
+      delay: 6
+    });
+    gsap.to("h1.three", {
+      opacity: 1,
+      display: "block",
+      duration: 0.5,
+      delay: 7
+    });
+  
+    gsap.to("h1.three", {
+      opacity: 0,
+      display: "none",
+      duration: 0.5,
+      delay: 7.5
+    });
+  
+    gsap.to("h1.two", {
+      opacity: 1,
+      display: "block",
+      duration: 0.5,
+      delay: 8
+    });
+
+    gsap.to("h1.two", {
+      opacity: 0,
+      display: "none",
+      duration: 0.5,
+      delay: 8.5
+    });
+  
+    gsap.to("h1.one", {
+      opacity: 1,
+      display: "block",
+      duration: 0.5,
+      delay: 9
+    });
+  
+    gsap.to("h1.one", {
+      opacity: 0,
+      display: "none",
+      duration: 0.5,
+      delay: 9.5
+    });
+  
+    gsap.to(".loader", {
+      opacity: 0,
+      display: "none",
+      duration: 0.5,
+      delay: 10
+    });
+  
+    gsap.to(".front", {
+      left: "-100%",
+      duration: 1.2,
+      delay: 10.5,
+      ease: "power2.inOut"
+    });
+  
+    gsap.to(".front-shadow", {
+      left: "-100%",
+      duration: 0.8,
+      delay: 10.5,
+      ease: "power2.inOut"
+    });
+  
+    gsap.to(".birthday", {
+      left: "0",
+      duration: 1,
+      delay: 10.7,
+      ease: "power2.inOut"
+    });
+  
+    gsap.to("h1.greeting", {
+      marginLeft: "0",
+      duration: 1.5,
+      delay: 11.3,
+      ease: "power2.inOut"
+    });
+  
+    gsap.to("h1.year", {
+      marginTop: "0",
+      duration: 2.5,
+      delay: 12,
+      ease: "power2.inOut"
+    });
+}
+</script>
+  </body>
+</html>
